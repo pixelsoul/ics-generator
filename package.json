@@ -1,0 +1,20 @@
+{
+  "name": "ics-generator",
+  "version": "1.0.0",
+  "description": "Generate ICS file download",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Oliver Kelso",
+  "license": "ISC",
+  "dependencies": {
+    "ical-generator": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
