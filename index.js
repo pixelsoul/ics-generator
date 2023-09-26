@@ -7,7 +7,7 @@ http.createServer((req, res) => {
     const queryObject = url.parse(req.url, true).query;
     const { start, end, summary, description, location, url: eventUrl, name } = queryObject;
 
-    const calendar = ical({ name: name || 'Spectrum' });
+    const calendar = ical({ name: name });
     const startTime = new Date(start);
     const endTime = new Date(end);
 
