@@ -5,7 +5,7 @@ const port = 3000;
 
 http.createServer((req, res) => {
     const queryObject = url.parse(req.url, true).query;
-    const { start, end, summary, description, location, url: eventUrl, name, uid } = queryObject;
+    const { start, end, summary, description, location, url: eventUrl, name } = queryObject;
 
     const calendar = ical({ name: name || 'Spectrum' });
     const startTime = new Date(start);
@@ -17,8 +17,7 @@ http.createServer((req, res) => {
         summary: summary,
         description: description,
         location: location,
-        url: eventUrl,
-        uid: uid
+        url: eventUrl
     });
 
     calendar.serve(res);
